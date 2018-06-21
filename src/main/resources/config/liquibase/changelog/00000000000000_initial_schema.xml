@@ -143,4 +143,21 @@
                                  referencedColumnNames="event_id"
                                  referencedTableName="jhi_persistent_audit_event"/>
     </changeSet>
+    <changeSet id="1" author="yifei">
+        <createTable tableName="todo">
+            <column autoIncrement="true" name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="time" type="timestamp" defaultValue="${now}" />
+            <column name="description" type="text" />
+            <column name="username" type="varchar(250)" />
+        </createTable>
+        <addForeignKeyConstraint baseTableName="todo" baseColumnNames="username" constraintName="fk_todo_username"
+                                 referencedTableName="jhi_user" referencedColumnNames="login" />
+    </changeSet>
+    <changeSet id="2" author="yifei">
+      <addColumn tableName="todo">
+        <column name="finished" type="boolean" valueBoolean="false" />
+      </addColumn>
+    </changeSet>
 </databaseChangeLog>

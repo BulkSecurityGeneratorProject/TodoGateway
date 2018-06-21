@@ -2,7 +2,7 @@
   "generator-jhipster": {
     "promptValues": {
       "packageName": "com.leoif.todo",
-      "nativeLanguage": "zh-cn"
+      "nativeLanguage": "en"
     },
     "jhipsterVersion": "4.14.4",
     "baseName": "TodoGateway",
@@ -32,7 +32,8 @@
     "enableTranslation": true,
     "nativeLanguage": "zh-cn",
     "languages": [
-      "zh-cn"
+      "zh-cn",
+      "en"
     ]
   }
 }

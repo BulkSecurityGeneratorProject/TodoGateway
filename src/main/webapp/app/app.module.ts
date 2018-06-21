@@ -17,6 +17,8 @@ import { TodoGatewayAdminModule } from './admin/admin.module';
 import { TodoGatewayAccountModule } from './account/account.module';
 import { TodoGatewayEntityModule } from './entities/entity.module';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import {
     JhiMainComponent,
@@ -31,6 +33,7 @@ import {
 @NgModule({
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         TodoGatewayAppRoutingModule,
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-'}),
         TodoGatewaySharedModule,
